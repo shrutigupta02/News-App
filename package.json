@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "newsapi": "^2.4.1",
+    "node": "^22.0.0"
+  },
+  "name": "dataproj",
+  "version": "1.0.0",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shruti",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .article-card {
+            display: flex;
+            flex-direction: column;
+            max-width: 350px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .article-card p {
+            margin-top: 0;
+        }
+
+        .article-card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        img{
+            max-height: 200px;
+        }
+
+        .article-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= str %></h1>
+    <form action="/news/search">
+        <input type="text" name="q" placeholder="Search for specific news"/>
+        <button>Find</button>
+    </form>
+    <div class="container">
+    <% news.forEach(article => { %>
+        <% if(article.title != '[Removed]'){%>
+        <div class="article-card">
+            <h2><%= article.title %></h2>
+            <img src="<%= article.urlToImage%>"
+            <p><br><%= article.description %></p>
+            <a href="<%= article.url %>">Read more</a>
+        </div>
+        <% } %>
+    <% }); %>
+    </div>
+</body>
+</html>
