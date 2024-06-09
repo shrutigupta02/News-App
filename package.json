@@ -5,13 +5,17 @@
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "newsapi": "^2.4.1",
-    "node": "^22.0.0"
+    "node": "^22.0.0",
+    "netlify-cli": "^17.17.1",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
   },
   "name": "dataproj",
   "version": "1.0.0",
   "main": "App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "netlify deploy --prod"
   },
   "author": "Shruti",
   "license": "ISC",
