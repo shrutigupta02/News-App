@@ -1,6 +1,6 @@
 const express = require('express');
 const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('77b991b269ea4cabb386cb93d76b528e');
+const newsapi = new NewsAPI('your api key');
 const path = require("path");
 
 const app = express();
